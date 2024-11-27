@@ -1,0 +1,16 @@
+COMMON: &common
+  DEBUG: False
+  SQLALCHEMY_TRACK_MODIFICATIONS: False
+
+development:
+  <<: *common
+  DEBUG: True
+  SQLALCHEMY_DATABASE_URI: 'mysql://{0}:{1}@localhost/lab4db'
+
+production:
+  <<: *common
+  SQLALCHEMY_DATABASE_URI: 'mysql://{0}:{1}@localhost/lab4db'
+
+ADDITIONAL_CONFIG:
+  MYSQL_ROOT_USER: root
+  MYSQL_ROOT_PASSWORD: it's a secret, just paste here your password
