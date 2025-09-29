@@ -162,3 +162,19 @@ INSERT INTO invoice_guest (guest_id, amount, ts_issued, reservation_id) VALUES
 (9, "1250.00", "2024-12-05 18:00:00", 9),
 (10, "1500.00", "2024-12-15 19:00:00", 10),
 (11, "2000.00", "2024-12-22 20:00:00", 11);
+
+
+
+
+-- * Adding reviews after long time
+INSERT INTO review (guest_id, review_context) VALUES
+(1, "Amazing stay! The room was perfect."),
+(2, "Not bad, but the service could be better."),
+(3, "Loved the location and the amenities."),
+(4, "Would definitely come back again!"),
+(5, "The room was clean and well-equipped."),
+(6, "Had a great time, highly recommend!"),
+(7, "The staff was friendly and helpful."),
+(8, "Enjoyed my stay, no complaints."),
+(9, "The bed was very comfortable."),
+(10, "Great value for the price."),

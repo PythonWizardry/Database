@@ -10,7 +10,13 @@ review_bp = Blueprint('review', __name__, url_prefix='/review')
 
 @review_bp.get('')
 def get_all_reviews() -> Response:
-
+    """
+    Get all reviews
+    ---
+    responses:
+      200:
+        description: Returns a list of reviews
+    """
     return make_response(jsonify(review_controller.find_all()), HTTPStatus.OK)
 
 

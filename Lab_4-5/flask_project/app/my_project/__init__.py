@@ -10,6 +10,8 @@ from sqlalchemy_utils import database_exists, create_database
 
 from flask_project.app.my_project.auth.route import register_routes
 
+from flasgger import Swagger
+
 SECRET_KEY = "SECRET_KEY"
 SQLALCHEMY_DATABASE_URI = "SQLALCHEMY_DATABASE_URI"
 MYSQL_ROOT_USER = "MYSQL_ROOT_USER"
@@ -27,6 +29,8 @@ def create_app(app_config: Dict[str, Any], additional_config: Dict[str, Any]) ->
     app = Flask(__name__)
     app.config["SECRET_KEY"] = secrets.token_hex(16)
     app.config = {**app.config, **app_config}
+
+    swagger = Swagger(app)
 
     _init_db(app)
     register_routes(app)
