@@ -23,6 +23,42 @@ def get_all_reviews() -> Response:
 @review_bp.post('')
 def create_review() -> Response:
 
+    """
+    Create a new review
+    ---
+    # parameters:
+    #     -   name: guest_id 
+    #         in: formData
+    #         required: True
+    #         type: integer
+    #         description: The ID of the guest
+    #     -   name: review_context
+    #         in: formData
+    #         required: True
+    #         type: text
+    #         description: The content of the review
+    consumes:
+      - application/json
+    parameters:
+      - in: body
+        name: body
+        required: true
+        schema:
+          type: object
+          properties:
+            guest_id:
+              type: integer
+              description: The ID of the guest
+            review_context:
+              type: string
+              description: The content of the review
+          required:
+            - guest_id
+            - review_context
+    responses:
+      201:
+        description: Returns the created review
+    """
     content = request.get_json()
     review = Review.create_from_dto(content)
     review_controller.create(review)
