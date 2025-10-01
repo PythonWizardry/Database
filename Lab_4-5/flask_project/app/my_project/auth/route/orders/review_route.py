@@ -26,17 +26,6 @@ def create_review() -> Response:
     """
     Create a new review
     ---
-    # parameters:
-    #     -   name: guest_id 
-    #         in: formData
-    #         required: True
-    #         type: integer
-    #         description: The ID of the guest
-    #     -   name: review_context
-    #         in: formData
-    #         required: True
-    #         type: text
-    #         description: The content of the review
     consumes:
       - application/json
     parameters:
