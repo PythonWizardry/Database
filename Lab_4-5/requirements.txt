@@ -4,3 +4,10 @@ PyYAML
 jsonschema
 redis
 SQLAlchemy==1.4.48
+
+# install if doen't work
+flask 
+flask_restx
+flask_sqlalchemy
+sqlalchemy_utils
+mysqlclient
