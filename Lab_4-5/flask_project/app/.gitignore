@@ -64,4 +64,9 @@ coverage.xml
 target/
 
 
+# Path to app.yml
+config/app_ec2.yml
 
+#my venv
+../../../../Database/venv/
+../../../venv/
