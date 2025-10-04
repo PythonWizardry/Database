@@ -30,12 +30,12 @@ if __name__ == '__main__':
 
         if flask_env == DEVELOPMENT:
             config_data = config_data_dict[DEVELOPMENT]
-            create_app(config_data, additional_config).run(host="0.0.0.0", port=5000, debug=True)
             print(f"Are you ready, kids?\n"
                     f"Aye, aye, Captain\n"
                     f"I can't hear you\n"
                     f"Aye, aye, Captain\n"
                     f"Oh")
+            create_app(config_data, additional_config).run(host="0.0.0.0", port=5000, debug=True)
 
         elif flask_env == PRODUCTION:
             config_data = config_data_dict[PRODUCTION]
