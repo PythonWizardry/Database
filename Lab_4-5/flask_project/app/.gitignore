@@ -64,4 +64,9 @@ coverage.xml
 target/
 
 
+# Path to app.yml
+Database\Lab_4-5\flask_project\app\config\app_ec2.yml
+
+#my env
+DataBase\env\
 
