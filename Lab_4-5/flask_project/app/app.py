@@ -35,7 +35,8 @@ if __name__ == '__main__':
                     f"I can't hear you\n"
                     f"Aye, aye, Captain\n"
                     f"Oh"
-                    f"☠️☠️☠️☠️☠️")
+                    f"☠️☠️☠️☠️☠️"
+                    f"🧽🧽🧽🧽🧽")
             create_app(config_data, additional_config).run(host="0.0.0.0", port=5000, debug=True)
 
         elif flask_env == PRODUCTION:
