@@ -4,3 +4,4 @@ PyYAML
 jsonschema
 redis
 SQLAlchemy==1.4.48
+pymysql
