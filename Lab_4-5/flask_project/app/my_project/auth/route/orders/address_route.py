@@ -13,6 +13,8 @@ def get_all_address() -> Response:
     """
     Get all addresses
     ---
+    tags:
+      - Address
     responses:
       200:
         description: Returns a list of addresses
@@ -25,6 +27,8 @@ def create_address() -> Response:
     """
     Create a new address
     ---
+    tags:
+      - Address
     consumes:
       - application/json
     parameters:
@@ -65,6 +69,8 @@ def get_address(address_id: int) -> Response:
     """
     Get an address by ID
     ---
+    tags:
+      - Address
     parameters:
       - in: path
         name: address_id
@@ -88,6 +94,8 @@ def update_address(address_id: int) -> Response:
     """
     Update an address by ID
     ---
+    tags:
+      - Address
     consumes:
       - application/json
     parameters:
@@ -127,6 +135,8 @@ def patch_address(address_id: int) -> Response:
     """
     Patch an address by ID
     ---
+    tags:
+      - Address
     consumes:
       - application/json
     parameters:
@@ -155,6 +165,8 @@ def delete_address(address_id: int) -> Response:
     """
     Delete an address by ID
     ---
+    tags:
+      - Address
     parameters:
       - in: path
         name: address_id

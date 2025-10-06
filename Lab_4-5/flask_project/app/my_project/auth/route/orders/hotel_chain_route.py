@@ -13,6 +13,8 @@ def get_all_hotel_chains() -> Response:
     """
     Get all hotel chains
     ---
+    tags:
+      - HotelChain
     responses:
       200:
         description: Returns a list of hotel chains
@@ -31,6 +33,8 @@ def create_hotel_chain() -> Response:
     """
     Create a new hotel chain
     ---
+    tags:
+      - HotelChain
     consumes:
       - application/json
     parameters:
@@ -87,6 +91,8 @@ def get_hotel_chain(hotel_chain_id: int) -> Response:
     """
     Get a hotel chain by ID
     ---
+    tags:
+      - HotelChain
     parameters:
       - in: path
         name: hotel_chain_id
@@ -110,6 +116,8 @@ def update_hotel_chain(hotel_chain_id: int) -> Response:
     """
     Update a hotel chain by ID
     ---
+    tags:
+      - HotelChain
     consumes:
       - application/json
     parameters:
@@ -161,6 +169,8 @@ def patch_hotel_chain(hotel_chain_id: int) -> Response:
     """
     Patch a hotel chain by ID
     ---
+    tags:
+      - HotelChain
     consumes:
       - application/json
     parameters:
@@ -189,6 +199,8 @@ def delete_hotel_chain(hotel_chain_id: int) -> Response:
     """
     Delete a hotel chain by ID
     ---
+    tags:
+      - HotelChain
     parameters:
       - in: path
         name: hotel_chain_id
@@ -209,6 +221,8 @@ def delete_all_hotel_chains() -> Response:
     """
     Delete all hotel chains
     ---
+    tags:
+      - HotelChain
     responses:
       200:
         description: All hotel chains deleted
@@ -221,6 +235,8 @@ def get_hotel_chain_after_city_id(city_id: int) -> Response:
     """
     Get hotel chains by city ID
     ---
+    tags:
+      - HotelChain
     parameters:
       - in: path
         name: city_id

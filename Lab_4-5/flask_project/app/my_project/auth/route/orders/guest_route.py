@@ -13,6 +13,8 @@ def get_all_guest() -> Response:
     """
     Get all guests
     ---
+    tags:
+      - Guest
     responses:
       200:
         description: Returns a list of guests
@@ -31,6 +33,8 @@ def create_guest() -> Response:
     """
     Create a new guest
     ---
+    tags:
+      - Guest
     consumes:
       - application/json
     parameters:
@@ -83,6 +87,8 @@ def get_guest(guest_id: int) -> Response:
     """
     Get a guest by ID
     ---
+    tags:
+      - Guest
     parameters:
       - in: path
         name: guest_id
@@ -106,6 +112,8 @@ def update_guest(guest_id: int) -> Response:
     """
     Update a guest by ID
     ---
+    tags:
+      - Guest
     consumes:
       - application/json
     parameters:
@@ -154,6 +162,8 @@ def patch_guest(guest_id: int) -> Response:
     """
     Patch a guest by ID
     ---
+    tags:
+      - Guest
     consumes:
       - application/json
     parameters:
@@ -182,6 +192,8 @@ def delete_guest(guest_id: int) -> Response:
     """
     Delete a guest by ID
     ---
+    tags:
+      - Guest
     parameters:
       - in: path
         name: guest_id
@@ -203,6 +215,8 @@ def delete_guest_all() -> Response:
     """
     Delete all guests
     ---
+    tags:
+      - Guest
     responses:
       200:
         description: All guests deleted
@@ -215,6 +229,8 @@ def get_guest_after_address_id(address_id: int) -> Response:
     """
     Get guests by address ID
     ---
+    tags:
+      - Guest
     parameters:
       - in: path
         name: address_id
