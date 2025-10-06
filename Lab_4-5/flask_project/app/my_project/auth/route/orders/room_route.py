@@ -13,6 +13,8 @@ def get_all_room() -> Response:
     """
     Get all rooms
     ---
+    tags:
+      - Room
     responses:
       200:
         description: Returns a list of rooms
@@ -31,6 +33,8 @@ def create_room() -> Response:
     """
     Create a new room
     ---
+    tags:
+      - Room
     consumes:
       - application/json
     parameters:
@@ -84,6 +88,8 @@ def get_room(room_id: int) -> Response:
     """
     Get a room by ID
     ---
+    tags:
+      - Room
     parameters:
       - in: path
         name: room_id
@@ -107,6 +113,8 @@ def update_room(room_id: int) -> Response:
     """
     Update a room by ID
     ---
+    tags:
+      - Room
     consumes:
       - application/json
     parameters:
@@ -156,6 +164,8 @@ def patch_room(room_id: int) -> Response:
     """
     Patch a room by ID
     ---
+    tags:
+      - Room
     consumes:
       - application/json
     parameters:
@@ -184,6 +194,8 @@ def delete_room(room_id: int) -> Response:
     """
     Delete a room by ID
     ---
+    tags:
+      - Room
     parameters:
       - in: path
         name: room_id
@@ -204,6 +216,8 @@ def delete_room_all() -> Response:
     """
     Delete all rooms
     ---
+    tags:
+      - Room
     responses:
       200:
         description: All rooms deleted
@@ -216,6 +230,8 @@ def get_room_after_status_id(status_id: int) -> Response:
     """
     Get rooms by status ID
     ---
+    tags:
+      - Room
     parameters:
       - in: path
         name: status_id
@@ -241,6 +257,8 @@ def get_room_after_hotel_id(hotel_id: int) -> Response:
     """
     Get rooms by hotel ID
     ---
+    tags:
+      - Room
     parameters:
       - in: path
         name: hotel_id
@@ -266,6 +284,8 @@ def get_room_after_type_id(type_id: int) -> Response:
     """
     Get rooms by type ID
     ---
+    tags:
+      - Room
     parameters:
       - in: path
         name: type_id

@@ -13,6 +13,8 @@ def get_all_room_reservation() -> Response:
     """
     Get all room reservations
     ---
+    tags:
+      - RoomReservation
     responses:
       200:
         description: Returns a list of room reservations
@@ -31,6 +33,8 @@ def create_room_reservation() -> Response:
     """
     Create a new room reservation
     ---
+    tags:
+      - RoomReservation
     consumes:
       - application/json
     parameters:
@@ -77,6 +81,8 @@ def get_room_reservation(room_reservation_id: int) -> Response:
     """
     Get a room reservation by ID
     ---
+    tags:
+      - RoomReservation
     parameters:
       - in: path
         name: room_reservation_id
@@ -100,6 +106,8 @@ def update_room_reservation(room_reservation_id: int) -> Response:
     """
     Update a room reservation by ID
     ---
+    tags:
+      - RoomReservation
     consumes:
       - application/json
     parameters:
@@ -144,6 +152,8 @@ def patch_room_reservation(room_reservation_id: int) -> Response:
     """
     Patch a room reservation by ID
     ---
+    tags:
+      - RoomReservation
     consumes:
       - application/json
     parameters:
@@ -172,6 +182,8 @@ def delete_room_reservation(room_reservation_id: int) -> Response:
     """
     Delete a room reservation by ID
     ---
+    tags:
+      - RoomReservation
     parameters:
       - in: path
         name: room_reservation_id
@@ -192,6 +204,8 @@ def delete_room_reservation_all() -> Response:
     """
     Delete all room reservations
     ---
+    tags:
+      - RoomReservation
     responses:
       200:
         description: All room reservations deleted
@@ -204,6 +218,8 @@ def get_room_after_reservation(reservation_id: int) -> Response:
     """
     Get rooms by reservation ID
     ---
+    tags:
+      - RoomReservation
     parameters:
       - in: path
         name: reservation_id
@@ -229,6 +245,8 @@ def get_reservation_after_room(room_id: int) -> Response:
     """
     Get reservations by room ID
     ---
+    tags:
+      - RoomReservation
     parameters:
       - in: path
         name: room_id

@@ -13,6 +13,8 @@ def get_all_type() -> Response:
     """
     Get all types
     ---
+    tags:
+      - Type
     responses:
       200:
         description: Returns a list of types
@@ -31,6 +33,8 @@ def create_type() -> Response:
     """
     Create a new type
     ---
+    tags:
+      - Type
     consumes:
       - application/json
     parameters:
@@ -64,6 +68,8 @@ def get_type(type_id: int) -> Response:
     """
     Get a type by ID
     ---
+    tags:
+      - Type
     parameters:
       - in: path
         name: type_id
@@ -87,6 +93,8 @@ def update_type(type_id: int) -> Response:
     """
     Update a type by ID
     ---
+    tags:
+      - Type
     consumes:
       - application/json
     parameters:
@@ -121,6 +129,8 @@ def patch_type(type_id: int) -> Response:
     """
     Patch a type by ID
     ---
+    tags:
+      - Type
     consumes:
       - application/json
     parameters:
@@ -149,6 +159,8 @@ def delete_type(type_id: int) -> Response:
     """
     Delete a type by ID
     ---
+    tags:
+      - Type
     parameters:
       - in: path
         name: type_id
@@ -169,6 +181,8 @@ def delete_type_all() -> Response:
     """
     Delete all types
     ---
+    tags:
+      - Type
     responses:
       200:
         description: All types deleted

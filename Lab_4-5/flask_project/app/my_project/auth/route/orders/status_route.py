@@ -13,6 +13,8 @@ def get_all_status() -> Response:
     """
     Get all statuses
     ---
+    tags:
+      - Status
     responses:
       200:
         description: Returns a list of statuses
@@ -31,6 +33,8 @@ def create_status() -> Response:
     """
     Create a new status
     ---
+    tags:
+      - Status
     consumes:
       - application/json
     parameters:
@@ -64,6 +68,8 @@ def get_status(status_id: int) -> Response:
     """
     Get a status by ID
     ---
+    tags:
+      - Status
     parameters:
       - in: path
         name: status_id
@@ -87,6 +93,8 @@ def update_status(status_id: int) -> Response:
     """
     Update a status by ID
     ---
+    tags:
+      - Status
     consumes:
       - application/json
     parameters:
@@ -121,6 +129,8 @@ def patch_status(status_id: int) -> Response:
     """
     Patch a status by ID
     ---
+    tags:
+      - Status
     consumes:
       - application/json
     parameters:
@@ -149,6 +159,8 @@ def delete_status(status_id: int) -> Response:
     """
     Delete a status by ID
     ---
+    tags:
+      - Status
     parameters:
       - in: path
         name: status_id
