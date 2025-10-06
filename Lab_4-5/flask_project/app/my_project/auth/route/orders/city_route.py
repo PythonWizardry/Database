@@ -13,6 +13,8 @@ def get_all_cities() -> Response:
     """
     Get all cities
     ---
+    tags:
+      - City
     responses:
       200:
         description: Returns a list of cities
@@ -31,6 +33,8 @@ def create_city() -> Response:
     """
     Create a new city
     ---
+    tags:
+      - City
     consumes:
       - application/json
     parameters:
@@ -64,6 +68,8 @@ def get_city(city_id: int) -> Response:
     """
     Get a city by ID
     ---
+    tags:
+      - City
     parameters:
       - in: path
         name: city_id
@@ -87,6 +93,8 @@ def update_city(city_id: int) -> Response:
     """
     Update a city by ID
     ---
+    tags:
+      - City
     consumes:
       - application/json
     parameters:
@@ -121,6 +129,8 @@ def patch_city(city_id: int) -> Response:
     """
     Patch a city by ID
     ---
+    tags:
+      - City
     consumes:
       - application/json
     parameters:
@@ -149,6 +159,8 @@ def delete_city(city_id: int) -> Response:
     """
     Delete a city by ID
     ---
+    tags:
+      - City
     parameters:
       - in: path
         name: city_id
@@ -169,6 +181,8 @@ def delete_all_cities() -> Response:
     """
     Delete all cities
     ---
+    tags:
+      - City
     responses:
       200:
         description: All cities deleted
