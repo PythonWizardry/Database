@@ -13,6 +13,8 @@ def get_all_reviews() -> Response:
     """
     Get all reviews
     ---
+    tags:
+      - Review
     responses:
       200:
         description: Returns a list of reviews
@@ -26,6 +28,8 @@ def create_review() -> Response:
     """
     Create a new review
     ---
+    tags:
+      - Review
     consumes:
       - application/json
     parameters:
@@ -60,6 +64,8 @@ def get_review(review_id: int) -> Response:
     """
     Get a review by ID
     ---
+    tags:
+      - Review
     parameters:
       - in: path
         name: review_id
@@ -81,6 +87,8 @@ def update_review(review_id: int) -> Response:
     """
     Update a review by ID
     ---
+    tags:
+      - Review
     consumes:
       - application/json
     parameters:
@@ -120,6 +128,8 @@ def patch_review(review_id: int) -> Response:
     """
     Patch a review by ID
     ---
+    tags:
+      - Review
     consumes:
       - application/json
     parameters:
@@ -149,6 +159,8 @@ def delete_review(review_id: int) -> Response:
     """
     Delete a review by ID
     ---
+    tags:
+      - Review
     parameters:
       - in: path
         name: review_id
@@ -169,6 +181,8 @@ def delete_reviews_all() -> Response:
     """
     Delete all reviews
     ---
+    tags:
+      - Review
     responses:
       200:
         description: All reviews deleted

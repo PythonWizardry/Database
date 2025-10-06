@@ -13,6 +13,8 @@ def get_all_invoice_chain() -> Response:
     """
     Get all invoice chains
     ---
+    tags:
+      - InvoiceChain
     responses:
       200:
         description: Returns a list of invoice chains
@@ -31,6 +33,8 @@ def create_invoice_chain() -> Response:
     """
     Create a new invoice chain
     ---
+    tags:
+      - InvoiceChain
     consumes:
       - application/json
     parameters:
@@ -80,6 +84,8 @@ def get_invoice_chain(invoice_chain_id: int) -> Response:
     """
     Get an invoice chain by ID
     ---
+    tags:
+      - InvoiceChain
     parameters:
       - in: path
         name: invoice_chain_id
@@ -103,6 +109,8 @@ def update_invoice_chain(invoice_chain_id: int) -> Response:
     """
     Update an invoice chain by ID
     ---
+    tags:
+      - InvoiceChain
     consumes:
       - application/json
     parameters:
@@ -149,6 +157,8 @@ def patch_invoice_chain(invoice_chain_id: int) -> Response:
     """
     Patch an invoice chain by ID
     ---
+    tags:
+      - InvoiceChain
     consumes:
       - application/json
     parameters:
@@ -177,6 +187,8 @@ def delete_invoice_chain(invoice_chain_id: int) -> Response:
     """
     Delete an invoice chain by ID
     ---
+    tags:
+      - InvoiceChain
     parameters:
       - in: path
         name: invoice_chain_id
@@ -197,6 +209,8 @@ def delete_invoice_chain_all() -> Response:
     """
     Delete all invoice chains
     ---
+    tags:
+      - InvoiceChain
     responses:
       200:
         description: All invoice chains deleted
@@ -209,6 +223,8 @@ def get_invoice_chain_after_hotel_chain_id(hotel_chain_id: int) -> Response:
     """
     Get invoice chains by hotel chain ID
     ---
+    tags:
+      - InvoiceChain
     parameters:
       - in: path
         name: hotel_chain_id

@@ -13,6 +13,8 @@ def get_all_reservation() -> Response:
     """
     Get all reservations
     ---
+    tags:
+      - Reservation
     responses:
       200:
         description: Returns a list of reservations
@@ -31,6 +33,8 @@ def create_reservation() -> Response:
     """
     Create a new reservation
     ---
+    tags:
+      - Reservation
     consumes:
       - application/json
     parameters:
@@ -88,6 +92,8 @@ def get_reservation(reservation_id: int) -> Response:
     """
     Get a reservation by ID
     ---
+    tags:
+      - Reservation
     parameters:
       - in: path
         name: reservation_id
@@ -111,6 +117,8 @@ def update_reservation(reservation_id: int) -> Response:
     """
     Update a reservation by ID
     ---
+    tags:
+      - Reservation
     consumes:
       - application/json
     parameters:
@@ -164,6 +172,8 @@ def patch_reservation(reservation_id: int) -> Response:
     """
     Patch a reservation by ID
     ---
+    tags:
+      - Reservation
     consumes:
       - application/json
     parameters:
@@ -192,6 +202,8 @@ def delete_reservation(reservation_id: int) -> Response:
     """
     Delete a reservation by ID
     ---
+    tags:
+      - Reservation
     parameters:
       - in: path
         name: reservation_id
@@ -212,6 +224,8 @@ def delete_reservation_all() -> Response:
     """
     Delete all reservations
     ---
+    tags:
+      - Reservation
     responses:
       200:
         description: All reservations deleted
@@ -224,6 +238,8 @@ def get_reservation_after_guest_id(guest_id: int) -> Response:
     """
     Get reservations by guest ID
     ---
+    tags:
+      - Reservation
     parameters:
       - in: path
         name: guest_id
@@ -249,6 +265,8 @@ def get_reservation_after_status_id(status_id: int) -> Response:
     """
     Get reservations by status ID
     ---
+    tags:
+      - Reservation
     parameters:
       - in: path
         name: status_id

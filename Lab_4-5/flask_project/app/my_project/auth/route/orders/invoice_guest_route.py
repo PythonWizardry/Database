@@ -13,6 +13,8 @@ def get_all_invoice_guests() -> Response:
     """
     Get all invoice guests
     ---
+    tags:
+      - InvoiceGuest
     responses:
       200:
         description: Returns a list of invoice guests
@@ -31,6 +33,8 @@ def create_invoice_guest() -> Response:
     """
     Create a new invoice guest
     ---
+    tags:
+      - InvoiceGuest
     consumes:
       - application/json
     parameters:
@@ -78,6 +82,8 @@ def get_invoice_guest(invoice_guest_id: int) -> Response:
     """
     Get an invoice guest by ID
     ---
+    tags:
+      - InvoiceGuest
     parameters:
       - in: path
         name: invoice_guest_id
@@ -101,6 +107,8 @@ def update_invoice_guest(invoice_guest_id: int) -> Response:
     """
     Update an invoice guest by ID
     ---
+    tags:
+      - InvoiceGuest
     consumes:
       - application/json
     parameters:
@@ -146,6 +154,8 @@ def patch_invoice_guest(invoice_guest_id: int) -> Response:
     """
     Patch an invoice guest by ID
     ---
+    tags:
+      - InvoiceGuest
     consumes:
       - application/json
     parameters:
@@ -174,6 +184,8 @@ def delete_invoice_guest(invoice_guest_id: int) -> Response:
     """
     Delete an invoice guest by ID
     ---
+    tags:
+      - InvoiceGuest
     parameters:
       - in: path
         name: invoice_guest_id
@@ -194,6 +206,8 @@ def delete_all_invoice_guests() -> Response:
     """
     Delete all invoice guests
     ---
+    tags:
+      - InvoiceGuest
     responses:
       200:
         description: All invoice guests deleted
@@ -206,6 +220,8 @@ def get_reservation_after_guest(guest_id: int) -> Response:
     """
     Get reservations by guest ID
     ---
+    tags:
+      - InvoiceGuest
     parameters:
       - in: path
         name: guest_id
@@ -231,6 +247,8 @@ def get_guest_after_reservation(reservation_id: int) -> Response:
     """
     Get guest by reservation ID
     ---
+    tags:
+      - InvoiceGuest
     parameters:
       - in: path
         name: reservation_id
