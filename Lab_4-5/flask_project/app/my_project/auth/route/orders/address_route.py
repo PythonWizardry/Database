@@ -24,40 +24,40 @@ def get_all_address() -> Response:
 
 @address_bp.post('')
 def create_address() -> Response:
-    # """
-    # Create a new address
-    # ---
-    # tags:
-    #   - Address
-    # consumes:
-    #   - application/json
-    # parameters:
-    #   - in: body
-    #     name: body
-    #     required: true
-    #     schema:
-    #       type: object
-    #       properties:
-    #         street:
-    #           type: string
-    #           description: The street name
-    #         house_number:
-    #           type: string
-    #           description: The house number
-    #         apartment_number:
-    #           type: string
-    #           description: The apartment number
-    #       required:
-    #         - street
-    #         - house_number
-    # responses:
-    #   201:
-    #     description: Returns the created address
-    #     content:
-    #       application/json:
-    #         schema:
-    #           type: object
-    # """
+    """
+    Create a new address
+    ---
+    tags:
+      - Address
+    consumes:
+      - application/json
+    parameters:
+      - in: body
+        name: body
+        required: true
+        schema:
+          type: object
+          properties:
+            street:
+              type: string
+              description: The street name
+            house_number:
+              type: string
+              description: The house number
+            apartment_number:
+              type: string
+              description: The apartment number
+          required:
+            - street
+            - house_number
+    responses:
+      201:
+        description: Returns the created address
+        content:
+          application/json:
+            schema:
+              type: object
+    """
     content = request.get_json()
     address = Address.create_from_dto(content)
     address_controller.create(address)
