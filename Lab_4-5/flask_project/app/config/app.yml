@@ -5,12 +5,12 @@ COMMON: &common
 development:
   <<: *common
   DEBUG: True
-  SQLALCHEMY_DATABASE_URI: 'mysql+pymysql://flaskuser:<your password>@<database endpoint>/lab4d'
+  SQLALCHEMY_DATABASE_URI: null
 
 production:
   <<: *common
-  SQLALCHEMY_DATABASE_URI: 'mysql+pymysql://flaskuser:<your password>@<database endpoint>/lab4d'
+  SQLALCHEMY_DATABASE_URI: null
 
 ADDITIONAL_CONFIG:
-  MYSQL_ROOT_USER: admin
-  MYSQL_ROOT_PASSWORD: password
+  MYSQL_ROOT_USER: null
+  MYSQL_ROOT_PASSWORD: null
