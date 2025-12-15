@@ -1,0 +1,20 @@
+{
+  "endpoint": "https://b3ka0pk219.execute-api.eu-north-1.amazonaws.com/duck/sensor-data",
+  "sensors": [
+    {
+      "type": "temperature",
+      "interval_ms": 80,
+      "location": {"lat": 49.8397, "lon": 24.0297}
+    },
+    {
+      "type": "humidity",
+      "interval_ms": 50,
+      "location": {"lat": 48.8566, "lon": 2.3522}
+    },
+    {
+      "type": "light",
+      "interval_ms": 100,
+      "location": {"lat": 50.4501, "lon": 30.5234}
+    }
+  ]
+}
